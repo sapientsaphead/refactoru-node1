@@ -49,8 +49,13 @@ The difference between `readFileSync` and `readFile`:
 
 * `readFileSync` blocks the server while reading the file then returns the contents of the read file.
 * `readFile` accepts a callback function. It immediately returns so that the server can process other requests, and it calls the callback when the file has been read. The contents of the file is passed as an argument to your callback.
+
 ```
-Note: It is crucial in Node to use asynchronous operations for any potentially slow operations such as reading a file or accessing the database. The performance of node is highly dependent on being able to process other operations and requests while waiting for slow operations to complete. Javascript's callbacks are a perfect paradigm for this event-based communication structure.
+Note: It is crucial in Node to use asynchronous operations for any potentially slow operations such as
+reading a file or accessing the database. The performance of node is highly dependent on being able to
+process other operations and requests while waiting for slow operations to complete. Javascript's callbacks
+are a perfect paradigm for this event-based communication structure.
+
 ```
 
 ##### Part IV
@@ -60,6 +65,10 @@ Note: It is crucial in Node to use asynchronous operations for any potentially s
 3. Move `res.writeHead` and `res.end` inside the callback and change `res.end` to output the contents of the file to the client.
 4. Restart the server.
 5. Refresh the page in your browser. You should see the contents of the file written to the page.
+
+
 ```
-Success! Now you know how to create your own web server using nodejs, return content to the client, set the content-type of the response, read a file from the file system, and use asynchronous file reading which goes a long way towards leveraging the speed of nodejs!
+Success! Now you know how to create your own web server using nodejs, return content to the client, set the
+content-type of the response, read a file from the file system, and use asynchronous file reading which goes
+a long way towards leveraging the speed of nodejs!
 ```
